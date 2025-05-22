@@ -8,9 +8,9 @@ public class Respawn : MonoBehaviour
     GameManger gameManager;
     public void OnCollisionEnter2D(Collision2D other)
     {
-       
-        
-         if (other.gameObject.tag == "Player")
+
+
+        if (other.gameObject.tag == "Player")
         {
             other.gameObject.transform.position = respawnPoint.position;
             Debug.Log("ê‘Ç∂Ç·Ç»Ç¢ÇÃÇ≈ÉäÉXÉ|Å[ÉìÇµÇ‹ÇµÇΩ");
