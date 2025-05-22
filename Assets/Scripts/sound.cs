@@ -19,7 +19,7 @@ public class sound : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            source.PlayOneShot(clip); //再生
+            source.PlayOneShot(clip); //右クリックで再生
         }
     }
 }

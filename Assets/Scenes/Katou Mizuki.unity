@@ -258,6 +258,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1057367912 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4180853288214888267, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
+  m_PrefabInstance: {fileID: 2538659546313976446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1155029464
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +276,7 @@ GameObject:
   - component: {fileID: 1155029467}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,21 +401,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3963210529821347207, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
-      propertyPath: m_Size.x
-      value: 1.1140966
-      objectReference: {fileID: 0}
-    - target: {fileID: 3963210529821347207, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
-      propertyPath: m_Size.y
-      value: 1.1653172
-      objectReference: {fileID: 0}
-    - target: {fileID: 3963210529821347207, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0036873817
-      objectReference: {fileID: 0}
-    - target: {fileID: 3963210529821347207, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.02941972
+    - target: {fileID: 2493504628507377827, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cab71069b4db7b942ab82fb174b85131, type: 3}
+    - target: {fileID: 4180853288214888267, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4790570605195978174, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -452,6 +449,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5525556856276441054, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f3e362a479bef349b6bf8489751be42, type: 3}
+    - target: {fileID: 5525556856276441054, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1057367912}
     - target: {fileID: 6563550243841233987, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
       propertyPath: m_Color.b
       value: 1
