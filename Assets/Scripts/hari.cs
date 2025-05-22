@@ -14,7 +14,7 @@ public class hari : MonoBehaviour
         }
         else if(other.gameObject.tag == "Player")
         {
-            transform.position = respawnPoint.position;   
+            other.gameObject.transform.position = respawnPoint.position;   
             Debug.Log("ê‘Ç∂Ç·Ç»Ç¢ÇÃÇ≈ÉäÉXÉ|Å[ÉìÇµÇ‹ÇµÇΩ");
         }
     }

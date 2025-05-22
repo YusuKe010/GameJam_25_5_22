@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
-    public float jumpForce = 10f;
+    public float jumpForce = 1000f;
     GameManger gameManager;
 
     void OnCollisionEnter2D(Collision2D other)
@@ -28,7 +28,7 @@ public class JumpPad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = FindAnyObjectByType<GameManger>();
     }
 
     // Update is called once per frame
