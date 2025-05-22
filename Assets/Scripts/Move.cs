@@ -23,7 +23,7 @@ public class Move : MonoBehaviour
         {
             transform.position -= speed * Vector3.right * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && Jump.IsGroud == false)
         {
             transform.position -= new Vector3(0, fall * Time.deltaTime, 0);
         }
