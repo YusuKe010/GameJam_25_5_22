@@ -11,7 +11,7 @@ public class GameManger : MonoBehaviour
 
 	public void ChangePlayerColor(PlayerColor color)
 	{
-		playerCoplor = PlayerColor;
+		playerCoplor = color;
 	}
 
 	public void GameOver()
