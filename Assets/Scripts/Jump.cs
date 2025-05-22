@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class Jump : MonoBehaviour
 {
     [SerializeField] private float jump = 15f;
     Rigidbody2D rb = default;
     bool isgrand=false;
+    [SerializeField]
+    private AudioSource source;
+    [SerializeField] AudioClip clip;
     public bool IsGroud
     {
         // IsGroud‚ğŒÄ‚Ño‚µ‚½‚Æ‚«‚Éisgrand‚ğ‚Á‚Ä‚­‚é
@@ -34,7 +38,7 @@ public class Jump : MonoBehaviour
         if (isgrand)
         {
             rb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
-
+            source.PlayOneShot(clip); //Œø‰Ê‰¹‚ğÄ¶
             isgrand = false;
         }
     }
