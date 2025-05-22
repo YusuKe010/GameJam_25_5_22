@@ -7,6 +7,10 @@ public class Jump : MonoBehaviour
     [SerializeField] private float jump = 15f;
     Rigidbody2D rb = default;
     bool isgrand=false;
+    public bool IsGroud
+    {
+        get { return isgrand; }
+    }
     // Start is called before the first frame update
     void Start()
     {
