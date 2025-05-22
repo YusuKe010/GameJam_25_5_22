@@ -8,14 +8,15 @@ public class JumpPad : MonoBehaviour
     public float jumpForce = 10f;
     GameManger gameManager;
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Player") && gameManager.PlayerColor == PlayerColor.Yellow)
+        if (other.gameObject.tag == "Player" && gameManager.PlayerColor == PlayerColor.Yellow)
         {
-            Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+            Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
 
             if (rb != null)
             {
+                Debug.Log("”½‰ž‚Í‚µ‚Ä‚é‚¼");
                 Vector3 currentVelocity = rb.velocity;
                 currentVelocity.y = 0;
                 rb.velocity = currentVelocity;

@@ -6,13 +6,13 @@ public class hari : MonoBehaviour
 {
     [SerializeField] Transform respawnPoint;
     GameManger gameManager;
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Player") && gameManager.PlayerColor == PlayerColor.Red)
+        if (other.gameObject.tag == "Player" && gameManager.PlayerColor == PlayerColor.Red)
         {
             Debug.Log("赤なので何も起きません");
         }
-        else if(other.CompareTag("Player"))
+        else if(other.gameObject.tag == "Player")
         {
             transform.position = respawnPoint.position;   
             Debug.Log("赤じゃないのでリスポーンしました");
