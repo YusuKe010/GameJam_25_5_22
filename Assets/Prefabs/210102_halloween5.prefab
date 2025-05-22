@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5525556856276441054}
   - component: {fileID: 8987485956251973785}
   - component: {fileID: 3880903198287592799}
-  - component: {fileID: 3963210529821347207}
+  - component: {fileID: -728352483858337709}
   m_Layer: 0
   m_Name: 210102_halloween5
   m_TagString: Untagged
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 4180853288214888267}
-  clip1: {fileID: 8300000, guid: cab71069b4db7b942ab82fb174b85131, type: 3}
+  clip: {fileID: 0}
 --- !u!114 &5525556856276441054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &3963210529821347207
+--- !u!61 &-728352483858337709
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -303,12 +303,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.015, y: 6}
+    oldSize: {x: 1.203, y: 1.2}
     newSize: {x: 12.03, y: 12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.015, y: 6}
+  m_Size: {x: 1.203, y: 1.2}
   m_EdgeRadius: 0
