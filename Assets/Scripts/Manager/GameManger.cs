@@ -2,7 +2,7 @@
 
 public class GameManger : MonoBehaviour
 {
-	private PlayerColor playerCoplor;
+	private PlayerColor playerCoplor = PlayerColor.Red;
 
 	public PlayerColor PlayerColor
 	{
@@ -14,9 +14,9 @@ public class GameManger : MonoBehaviour
 		playerCoplor = color;
 	}
 
-	public void GameOver()
+	public void GameCleear()
 	{
-		FindAnyObjectByType<SceneLoader>().LoadScene("GameOver");
+		FindAnyObjectByType<SceneLoader>().LoadScene("GameClear");
 	}
 }
 
@@ -25,5 +25,6 @@ public enum PlayerColor
 	Red,
 	Green,
 	Blue,
-	Yellow
+	Yellow,
+	Purple
 }
