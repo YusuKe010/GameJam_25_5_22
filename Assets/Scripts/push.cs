@@ -20,10 +20,12 @@ public class push : MonoBehaviour
         if (gameManager.PlayerColor == PlayerColor.Green)
         {
             rb.WakeUp();
+            rb.isKinematic = false;
         }
         else
         {
             rb.Sleep();
+            rb.isKinematic = true;
         }
     }
 }
