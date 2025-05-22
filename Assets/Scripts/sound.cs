@@ -7,6 +7,7 @@ public class sound : MonoBehaviour
 {
     [SerializeField]
     private AudioSource source; 
+    [SerializeField] AudioClip clip;
 
     [SerializeField]
     private AudioClip clip1;
@@ -22,7 +23,7 @@ public class sound : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             source.clip = clip1; //Ä¶‚µ‚½‚¢clip‚ğw’è‚µ‚Ä
-            source.Play(); //Ä¶
+            source.PlayOneShot(clip); //Ä¶
         }
     }
 }
