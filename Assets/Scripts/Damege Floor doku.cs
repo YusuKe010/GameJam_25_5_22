@@ -21,8 +21,10 @@ public class DamegeFloordoku : MonoBehaviour
                 {
                     player.TakeDamege(damegeAmount);
                     damageTimer = 0f;
+                    Debug.Log("Damage");
                 }
             }
+                    Debug.Log("Damage" + damageTimer);
            
 
         }
