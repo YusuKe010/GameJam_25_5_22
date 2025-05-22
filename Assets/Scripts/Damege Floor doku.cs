@@ -41,7 +41,6 @@ public class DamegeFloordoku : MonoBehaviour
     {
         
         gameManeger = FindAnyObjectByType<GameManger>();
-        gameManeger.ChangePlayerColor(PlayerColor.Purple);
     }
 
     // Update is called once per frame
