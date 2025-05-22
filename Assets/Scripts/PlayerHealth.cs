@@ -7,10 +7,12 @@ public class PlayerHealth : MonoBehaviour
     public int maxHP = 10;
     public int currentHP;
     [SerializeField] private Transform respawnPoint;
+    [SerializeField] Stock stock;
     // Start is called before the first frame update
     void Start()
     {
         currentHP = maxHP;
+        stock.changetext("Å~" +  currentHP);
     }
 
     public void TakeDamege(int amount)
@@ -22,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
             currentHP = 0;
             Respawn();
         }
+        stock.changetext("Å~" + currentHP);
     }
     private void Respawn()
     {

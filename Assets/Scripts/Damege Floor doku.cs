@@ -21,8 +21,10 @@ public class DamegeFloordoku : MonoBehaviour
                 {
                     player.TakeDamege(damegeAmount);
                     damageTimer = 0f;
+                    Debug.Log("Damage");
                 }
             }
+                    Debug.Log("Damage" + damageTimer);
            
 
         }
@@ -41,7 +43,6 @@ public class DamegeFloordoku : MonoBehaviour
     {
         
         gameManeger = FindAnyObjectByType<GameManger>();
-        
     }
 
     // Update is called once per frame
