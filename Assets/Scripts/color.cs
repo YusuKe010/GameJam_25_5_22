@@ -10,7 +10,7 @@ public class color : MonoBehaviour
     {
         gameManager = FindAnyObjectByType<GameManger>();
         Material mat = this.GetComponent<Renderer>().material; // 現在使用されているマテリアルを取得 
-        GetComponent<Renderer>().material.color = Color.red;//まず赤に
+        GetComponent<SpriteRenderer>().color = Color.red;//まず赤に変更
     }
 
     // Update is called once per frame
@@ -22,22 +22,27 @@ public class color : MonoBehaviour
             {
                 case PlayerColor.Red:
                     gameManager.ChangePlayerColor(PlayerColor.Blue);
-                    GetComponent<Renderer>().material.color = Color.blue;
+                    GetComponent<SpriteRenderer>().color = Color.blue;
                     Debug.Log(gameManager.PlayerColor);
                     break;
                 case PlayerColor.Blue:
                     gameManager.ChangePlayerColor(PlayerColor.Yellow);
-                    GetComponent<Renderer>().material.color = Color.yellow;
+                    GetComponent<SpriteRenderer>().color = Color.yellow;
                     Debug.Log(gameManager.PlayerColor);
                     break;
                 case PlayerColor.Yellow:
                     gameManager.ChangePlayerColor(PlayerColor.Green);
-                    GetComponent<Renderer>().material.color = Color.green;
+                    GetComponent<SpriteRenderer>().color = Color.green;
                     Debug.Log(gameManager.PlayerColor);
                     break;
                 case PlayerColor.Green:
+                    gameManager.ChangePlayerColor(PlayerColor.Purple);
+                    GetComponent<SpriteRenderer>().color = new Color(0.6f, 0, 1);
+                    Debug.Log(gameManager.PlayerColor);
+                    break;
+                case PlayerColor.Purple:
                     gameManager.ChangePlayerColor(PlayerColor.Red);
-                    GetComponent<Renderer>().material.color = Color.red;
+                    GetComponent<SpriteRenderer>().color = Color.red;
                     Debug.Log(gameManager.PlayerColor);
                     break;
             }
