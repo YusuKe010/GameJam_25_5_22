@@ -10,7 +10,7 @@ public class color : MonoBehaviour
     {
         gameManager = FindAnyObjectByType<GameManger>();
         Material mat = this.GetComponent<Renderer>().material; // 現在使用されているマテリアルを取得 
-        GetComponent<Renderer>().material.color = Color.red;//まず赤に
+        GetComponent<Renderer>().material.color = Color.red;//まず赤に変更
     }
 
     // Update is called once per frame
