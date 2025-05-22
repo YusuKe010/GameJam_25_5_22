@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    [SerializeField] float jump = 15f;
+    [SerializeField] private float jump = 15f;
     Rigidbody2D rb = default;
+    bool isgrand=false;
     // Start is called before the first frame update
     void Start()
     {
-        rb=GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -17,7 +18,22 @@ public class Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+            jumpplayer();
         }
+    }
+
+    public void jumpplayer()
+    {
+        if (isgrand)
+        {
+            rb.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
+
+            isgrand = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isgrand = true;
     }
 }
