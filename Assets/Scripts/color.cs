@@ -10,19 +10,19 @@ public class color : MonoBehaviour
     {
         gameManager = FindAnyObjectByType<GameManger>();
         Material mat = this.GetComponent<Renderer>().material; // 現在使用されているマテリアルを取得 
-        GetComponent<Renderer>().material.color = Color.red;
+        GetComponent<Renderer>().material.color = Color.red;//まず赤に
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))//右クリックで色を変更
         {
             switch (gameManager.PlayerColor)
             {
                 case PlayerColor.Red:
                     gameManager.ChangePlayerColor(PlayerColor.Blue);
-                    GetComponent<Renderer>().material.color = Color.blue;// マテリアルの色設定に赤色を設定
+                    GetComponent<Renderer>().material.color = Color.blue;
                     Debug.Log(gameManager.PlayerColor);
                     break;
                 case PlayerColor.Blue:
