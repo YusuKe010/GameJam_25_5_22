@@ -7,7 +7,7 @@ using static Unity.VisualScripting.Member;
 public class JumpPad : MonoBehaviour
 {
     public float jumpForce = 10000f;
-    GameManger gameManager;
+    GameManager gameManager;
     [SerializeField]
     private AudioSource source;
     [SerializeField] AudioClip clip;
@@ -33,7 +33,7 @@ public class JumpPad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManger>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame
