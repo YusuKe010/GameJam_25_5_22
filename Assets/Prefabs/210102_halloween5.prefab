@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8987485956251973785}
   - component: {fileID: 3880903198287592799}
   - component: {fileID: -728352483858337709}
+  - component: {fileID: 5122925125285516928}
   m_Layer: 0
   m_Name: 210102_halloween5
   m_TagString: Untagged
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6115422153080428d37011ff6bbd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startColor: 0
 --- !u!82 &4180853288214888267
 AudioSource:
   m_ObjectHideFlags: 0
@@ -226,6 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 100
+  source: {fileID: 0}
+  clip: {fileID: 0}
 --- !u!114 &8987485956251973785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,3 +316,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.203, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &5122925125285516928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8699606222077284490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869fc54d2ed470741a711592e49419a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 0
+  respawnPoint: {fileID: 0}
+  stock: {fileID: 0}
