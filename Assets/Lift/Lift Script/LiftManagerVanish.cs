@@ -10,6 +10,7 @@ public class LiftManagerVanish : MonoBehaviour
     [SerializeField, Tooltip("プレイヤーが乗った時に作動するか(基本ON)")] bool playOnCollision = default;
     [SerializeField, Tooltip("リフトの移動速度")] float m_animSpeed = default;
     Animator m_anim = default;
+    GameManger _gameManger;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class LiftManagerVanish : MonoBehaviour
         _liftmode = (int)liftmoving;
         Debug.Log(_liftmode);
         m_anim.SetInteger("Liftmoving", _liftmode);
-        
+        _gameManger = GameObject.Find("GameManager").GetComponent<GameManger>();//GameManagerを探してコンポーネント取得
     }
 
     // Update is called once per frame
@@ -25,10 +26,14 @@ public class LiftManagerVanish : MonoBehaviour
     {
         m_anim.SetBool("PlayOnCollision", playOnCollision);
         m_anim.speed = m_animSpeed;
-/*        if (!playOnCollision)
+        if (_gameManger.PlayerColor == PlayerColor.Blue)
         {
-            playOnCollision = true;
-        }*/
+            m_anim.enabled = true;
+        }
+        else
+        {
+            m_anim.enabled = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

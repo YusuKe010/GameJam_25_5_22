@@ -11,6 +11,7 @@ public class LiftManager : MonoBehaviour
     [SerializeField, Tooltip("リフトの移動速度")] float m_animSpeed = default;
     AudioSource m_audioSource;
     Animator m_anim = default;
+    GameManger _gameManger;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class LiftManager : MonoBehaviour
         m_audioSource = GetComponent<AudioSource>();
         _liftmode = (int)liftmoving;
         m_anim.SetInteger("Liftmoving", _liftmode);
+        _gameManger = GameObject.Find("GameManager").GetComponent<GameManger>();//GameManagerを探してコンポーネント取得
         
     }
 
@@ -26,8 +28,17 @@ public class LiftManager : MonoBehaviour
     {
         m_anim.SetBool("PlayOnCollision", playOnCollision);
         m_anim.speed = m_animSpeed;
+        if (_gameManger.PlayerColor == PlayerColor.Blue)
+        {
+            m_anim.enabled = true;
+        }
+        else
+        {
+            m_anim.enabled = false;
+        }
     }
 
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (playOnCollision == true)
