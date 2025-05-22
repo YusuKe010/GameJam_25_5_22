@@ -18,7 +18,7 @@ public class LiftManagerVanish : MonoBehaviour
         _liftmode = (int)liftmoving;
         Debug.Log(_liftmode);
         m_anim.SetInteger("Liftmoving", _liftmode);
-        _gameManger = GameObject.Find("GameManager").GetComponent<GameManger>();//GameManagerを探してコンポーネント取得
+        _gameManger = FindAnyObjectByType<GameManger>(); //GameManagerを探してコンポーネント取得
     }
 
     // Update is called once per frame
