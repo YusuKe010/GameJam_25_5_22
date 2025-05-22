@@ -2,11 +2,15 @@ using DG.Tweening.Core.Easing;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class JumpPad : MonoBehaviour
 {
     public float jumpForce = 10000f;
     GameManger gameManager;
+    [SerializeField]
+    private AudioSource source;
+    [SerializeField] AudioClip clip;
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -21,6 +25,7 @@ public class JumpPad : MonoBehaviour
                 currentVelocity.y = 0;
                 rb.velocity = currentVelocity;
                 rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+                source.PlayOneShot(clip); //å¯â âπÇçƒê∂
             }
         }
     }
