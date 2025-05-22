@@ -51,4 +51,11 @@ public class Jump : MonoBehaviour
             isgrand = true;
         } 
     }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Damage floor")
+        {
+            isgrand = false;
+        }
+    }
 }
