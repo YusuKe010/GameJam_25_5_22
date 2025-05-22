@@ -4,12 +4,37 @@ using UnityEngine;
 
 public class color : MonoBehaviour
 {
+    [SerializeField] PlayerColor startColor;
     GameManger gameManager;
     // Start is called before the first frame update
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManger>();
         Material mat = this.GetComponent<Renderer>().material; // 現在使用されているマテリアルを取得 
+        gameManager.ChangePlayerColor(startColor);
+        switch (startColor)
+        {
+            case PlayerColor.Red:
+                GetComponent<SpriteRenderer>().color = Color.red;
+                Debug.Log(gameManager.PlayerColor);
+                break;
+            case PlayerColor.Blue:
+                GetComponent<SpriteRenderer>().color = Color.blue;
+                Debug.Log(gameManager.PlayerColor);
+                break;
+            case PlayerColor.Yellow:
+                GetComponent<SpriteRenderer>().color = Color.yellow;
+                Debug.Log(gameManager.PlayerColor);
+                break;
+            case PlayerColor.Green:
+                GetComponent<SpriteRenderer>().color = Color.green;
+                Debug.Log(gameManager.PlayerColor);
+                break;
+            case PlayerColor.Purple:
+                GetComponent<SpriteRenderer>().color = new Color(0.6f, 0, 1);
+                Debug.Log(gameManager.PlayerColor);
+                break;
+        }
         GetComponent<SpriteRenderer>().color = Color.red;//まず赤に変更
     }
 
@@ -48,5 +73,6 @@ public class color : MonoBehaviour
             }
         }
     }
+
 }
 
