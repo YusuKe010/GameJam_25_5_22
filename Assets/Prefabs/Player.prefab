@@ -142,7 +142,7 @@ MonoBehaviour:
   _playerInput: {fileID: 7763372652787823635}
   _controller: {fileID: 6154295020877994953}
   _speed: 5
-  _fall: 1
+  _fall: 10
 --- !u!50 &3880903198287592799
 Rigidbody2D:
   serializedVersion: 4
