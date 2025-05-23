@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-	private PlayerColor playerCoplor = PlayerColor.Red;
+    [SerializeField] Image _blackfade;
+
+    private PlayerColor playerCoplor = PlayerColor.Red;
 
 
 	public PlayerColor PlayerColor
