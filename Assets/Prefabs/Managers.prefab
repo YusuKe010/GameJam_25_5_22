@@ -254,8 +254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08a0a98781e89d43b66684d47d68602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _blackfade: {fileID: 0}
   _startSE: {fileID: 0}
-  introduce: {fileID: 0}
+  selectButton: []
 --- !u!114 &7399961395811872064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,3 +270,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _blackfade: {fileID: 0}
+  clearJingle: {fileID: 8300000, guid: bad04cf30a3403b4d894a10008628a24, type: 3}
+  audioManager: {fileID: 1200207028062175026}
