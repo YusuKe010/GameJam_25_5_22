@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public event Action<string> OnTakeDamage;
-    public event Action OnDeth;
+    public event Action<string> OnDeth;
 
 
     void Start()
