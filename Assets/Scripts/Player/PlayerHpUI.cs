@@ -5,17 +5,35 @@ using UnityEngine.UI;
 
 public class PlayerHpUI : MonoBehaviour
 {
-    [SerializeField] Text _stocktext;
+    [SerializeField] GameObject lifeimage;
+    [SerializeField] GameObject parent;
     [SerializeField] PlayerHealth _health;
+
+    List<GameObject> lifeimagelist=new List<GameObject>();
 
     private void Start()
     {
-        changetext($"Å~{_health.MaxHP}");
-        _health.OnTakeDamage += changetext;
+
+        for(int i = 0; i < _health.MaxHP; i++)
+        {
+            GameObject obj = Instantiate(lifeimage, parent.transform);
+            lifeimagelist.Add(obj);
+        }
+
+        _health.OnTakeDamage += updatelife;
     }
 
-    public void changetext(string text)
+    public void updatelife(string text)
     {
-        _stocktext.text = text;
+        if (lifeimage == null) return;
+        for (int i = 0; i < _health.MaxHP; i++)
+        {
+            Debug.Log(_health.CurrrentHP);
+            if(i> _health.CurrrentHP)
+            {
+                Debug.Log(i);
+                lifeimagelist[i].SetActive(false);
+            }
+        }
     }
 }

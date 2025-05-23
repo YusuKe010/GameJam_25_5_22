@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private AudioManager _audioManager;
     [SerializeField] private AudioClip _takeDamageSE;
     [SerializeField] private AudioClip _dethSE;
+    [SerializeField] private PlayerHpUI _playerHpUI;
     [SerializeField] private int _maxHP = 10;
     public int MaxHP
     {
@@ -28,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         _currentHP = _maxHP;
+        _playerHpUI.updatelife("");
     }
 
     public void TakeDamege(int amount)

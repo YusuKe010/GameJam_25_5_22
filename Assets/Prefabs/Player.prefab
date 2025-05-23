@@ -231,6 +231,7 @@ MonoBehaviour:
   _audioManager: {fileID: 0}
   _takeDamageSE: {fileID: 8300000, guid: 45ad5cbe5cf6a0241aaf56b6f7a1634f, type: 3}
   _dethSE: {fileID: 8300000, guid: e13cd40c82ad77942b97402454b29a14, type: 3}
+  _playerHpUI: {fileID: 0}
   _maxHP: 10
 --- !u!114 &7763372652787823635
 MonoBehaviour:
@@ -290,7 +291,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0100662485, y: -0.55}
-  m_Size: {x: 0.9598691, y: 0.09000004}
+  m_Size: {x: 0.78, y: 0.09000004}
   m_Direction: 1
 --- !u!1001 &1058099150852980950
 PrefabInstance:
