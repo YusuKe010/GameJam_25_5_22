@@ -10,22 +10,12 @@ public class SceneLoader : MonoBehaviour
     int _chooseButton;
     Transform _buttonX;
     //Transform _titleX;
-    Image _blackfade;
+    [SerializeField] Image _blackfade;
     [SerializeField] AudioClip _startSE;
-    [SerializeField] GameObject introduce;
-    AudioSource _titleBGM;
-    AudioSource _audiosource;
-    GameObject[] selectButton;
+    [SerializeField] GameObject[] selectButton;
     void Start()
     {
-        GameObject BGM = GameObject.Find("Title BGM");
-        GameObject blackFade = GameObject.Find("BlackFade");
-        selectButton = GameObject.FindGameObjectsWithTag("Button");
-        _titleBGM = BGM.GetComponent<AudioSource>();
-        _audiosource = GetComponent<AudioSource>();
-        _blackfade = blackFade.GetComponent<Image>();
         StartCoroutine("FadeIn");
-
     }
     IEnumerator FadeIn()
     {
@@ -37,7 +27,6 @@ public class SceneLoader : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         //selectButton.transform.position = new Vector2(-1400, -150);
-        _titleBGM.Play();
         _blackfade.enabled = false;
         //-1400 Å® -600
 
@@ -63,7 +52,6 @@ public class SceneLoader : MonoBehaviour
         }
         for (int i = 0; i <= 10; i++)
         {
-            _titleBGM.volume -= 0.1f;
             yield return new WaitForSeconds(0.05f);
         }
         yield return new WaitForSeconds(1f);
