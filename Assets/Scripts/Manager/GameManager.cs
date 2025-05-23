@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Image _blackfade;
+    [SerializeField] AudioClip clearJingle;
+    [SerializeField] AudioManager audioManager;
 
     private PlayerColor playerCoplor = PlayerColor.Red;
 
@@ -21,7 +23,11 @@ public class GameManager : MonoBehaviour
 
 	public void GameClear()
 	{
-		FindAnyObjectByType<SceneLoader>().LoadScene("GameClear");
+        audioManager.StopBGM();
+        audioManager.LoopOFF();
+        audioManager.PlayBGM(clearJingle);
+
+        StartCoroutine("FadeOut");
 	}
     IEnumerator FadeIn()
     {
@@ -35,11 +41,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeOut()
     {
-        for (int i = 0; i < 51; i++)
-        {
-            _blackfade.color += new Color32(0, 0, 0, 5);
-            yield return new WaitForSeconds(0.05f);
-        }
+        yield return new WaitForSeconds(7f);
+        FindAnyObjectByType<SceneLoader>().LoadScene("GameClear");
     }
 }
 
