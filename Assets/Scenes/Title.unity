@@ -1500,6 +1500,10 @@ PrefabInstance:
       propertyPath: _blackfade
       value: 
       objectReference: {fileID: 1181734498}
+    - target: {fileID: 8152981069159819775, guid: 8859a5fd96974324ca7ae50d1e929000, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5477890f2ed527745930ed82d3d59474, type: 3}
     - target: {fileID: 8964110567061655977, guid: 8859a5fd96974324ca7ae50d1e929000, type: 3}
       propertyPath: m_Name
       value: Managers
