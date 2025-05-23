@@ -5,11 +5,11 @@ using UnityEngine;
 public class color : MonoBehaviour
 {
     [SerializeField] PlayerColor startColor;
-    GameManger gameManager;
+    GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManger>();
+        gameManager = FindAnyObjectByType<GameManager>();
         Material mat = this.GetComponent<Renderer>().material; // 現在使用されているマテリアルを取得 
         gameManager.ChangePlayerColor(startColor);
         switch (startColor)
