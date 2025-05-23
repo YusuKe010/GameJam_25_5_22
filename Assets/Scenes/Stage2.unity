@@ -660,6 +660,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1626091395804012862, guid: fd444bae385c020488aa6a1aa16c7aee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2003576654087476936, guid: fd444bae385c020488aa6a1aa16c7aee, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -4971,7 +4975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3334830090908676182, guid: a744593eff67cfb4b8d49d75be8b1676, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5979,7 +5983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f112cc1139b04ad45870f59c927ef14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 152751753}
 --- !u!61 &1624583177959091378
 BoxCollider2D:
   m_ObjectHideFlags: 0
