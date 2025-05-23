@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamegeFloordoku : MonoBehaviour
 {
-    GameManger gameManeger;
+    GameManager gameManeger;
     public int damegeAmount = 10;
     public float damageInterval = 1f;
 
@@ -42,7 +42,7 @@ public class DamegeFloordoku : MonoBehaviour
     void Start()
     {
         
-        gameManeger = FindAnyObjectByType<GameManger>();
+        gameManeger = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame

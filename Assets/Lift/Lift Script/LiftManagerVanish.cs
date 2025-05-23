@@ -10,7 +10,7 @@ public class LiftManagerVanish : MonoBehaviour
     [SerializeField, Tooltip("プレイヤーが乗った時に作動するか(基本ON)")] bool playOnCollision = default;
     [SerializeField, Tooltip("リフトの移動速度")] float m_animSpeed = default;
     Animator m_anim = default;
-    GameManger _gameManger;
+    GameManager _gameManger;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class LiftManagerVanish : MonoBehaviour
         _liftmode = (int)liftmoving;
         Debug.Log(_liftmode);
         m_anim.SetInteger("Liftmoving", _liftmode);
-        _gameManger = FindAnyObjectByType<GameManger>(); //GameManagerを探してコンポーネント取得
+        _gameManger = FindAnyObjectByType<GameManager>(); //GameManagerを探してコンポーネント取得
     }
 
     // Update is called once per frame
