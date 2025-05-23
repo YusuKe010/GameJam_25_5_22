@@ -150,6 +150,10 @@ PrefabInstance:
       value: Damege floor
       objectReference: {fileID: 0}
     - target: {fileID: 9034847966160438276, guid: 8bba33770799fa14396f9a861947cab9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034847966160438276, guid: 8bba33770799fa14396f9a861947cab9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.97383
       objectReference: {fileID: 0}
