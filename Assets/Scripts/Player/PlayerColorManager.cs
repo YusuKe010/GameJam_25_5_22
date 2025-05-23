@@ -6,11 +6,11 @@ public class PlayerColorManager : MonoBehaviour
 {
     [SerializeField] PlayerColor _startColor;
     [SerializeField] PlayerInput _playerInput;
-    GameManger _gameManager;
+    GameManager _gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        _gameManager = FindAnyObjectByType<GameManger>();
+        _gameManager = FindAnyObjectByType<GameManager>();
         Material mat = this.GetComponent<Renderer>().material; // 現在使用されているマテリアルを取得 
         _gameManager.ChangePlayerColor(_startColor);
         switch (_startColor)
