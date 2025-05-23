@@ -21,6 +21,7 @@ public class PlayerHpUI : MonoBehaviour
         }
 
         _health.OnTakeDamage += updatelife;
+        _health.OnDeth += updatelife;
     }
 
     public void updatelife(string text)
