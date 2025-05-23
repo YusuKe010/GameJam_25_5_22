@@ -423,9 +423,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 1
   m_FollowOffset: {x: 0, y: 0, z: -10}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -915,10 +915,10 @@ PrefabInstance:
     - target: {fileID: 5525556856276441054, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
       propertyPath: source
       value: 
-      objectReference: {fileID: 985415182}
+      objectReference: {fileID: 0}
     - target: {fileID: 8699606222077284490, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
       propertyPath: m_Name
-      value: 210102_halloween5
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8699606222077284490, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
       propertyPath: m_TagString
@@ -937,11 +937,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
---- !u!82 &985415182 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4180853288214888267, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
-  m_PrefabInstance: {fileID: 972045621}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &998197382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1013,23 +1008,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -837695797852308146, guid: cc33e65e9ad8e72489e70bcb202f4bc7, type: 3}
       propertyPath: m_Size.x
-      value: 4.23
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -837695797852308146, guid: cc33e65e9ad8e72489e70bcb202f4bc7, type: 3}
       propertyPath: m_Size.y
-      value: 5.12
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4044486769538819403, guid: cc33e65e9ad8e72489e70bcb202f4bc7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.31941
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4044486769538819403, guid: cc33e65e9ad8e72489e70bcb202f4bc7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.31941
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4044486769538819403, guid: cc33e65e9ad8e72489e70bcb202f4bc7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.31941
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4044486769538819403, guid: cc33e65e9ad8e72489e70bcb202f4bc7, type: 3}
       propertyPath: m_LocalPosition.x
