@@ -5,7 +5,7 @@ using UnityEngine;
 public class hari : MonoBehaviour
 {
     [SerializeField] Transform respawnPoint;
-    GameManger gameManager;
+    GameManager gameManager;
     public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player" && gameManager.PlayerColor == PlayerColor.Red)
@@ -23,7 +23,7 @@ public class hari : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManger>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame

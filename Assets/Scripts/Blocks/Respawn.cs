@@ -5,7 +5,7 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     [SerializeField] Transform respawnPoint;
-    GameManger gameManager;
+    GameManager gameManager;
     public void OnCollisionEnter2D(Collision2D other)
     {
 
@@ -21,7 +21,7 @@ public class Respawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManger>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame
