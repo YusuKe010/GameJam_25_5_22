@@ -1469,6 +1469,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1626091395804012862, guid: fd444bae385c020488aa6a1aa16c7aee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1972482391140833600, guid: fd444bae385c020488aa6a1aa16c7aee, type: 3}
       propertyPath: m_Range
       value: 10
@@ -2319,6 +2323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f112cc1139b04ad45870f59c927ef14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPoint: {fileID: 0}
 --- !u!1001 &1070016033
 PrefabInstance:
   m_ObjectHideFlags: 0
