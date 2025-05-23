@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GameManger : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
 	private PlayerColor playerCoplor = PlayerColor.Red;
 
@@ -14,7 +14,7 @@ public class GameManger : MonoBehaviour
 		playerCoplor = color;
 	}
 
-	public void GameCleear()
+	public void GameClear()
 	{
 		FindAnyObjectByType<SceneLoader>().LoadScene("GameClear");
 	}

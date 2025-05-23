@@ -3393,7 +3393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8699606222077284490, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8987485956251973785, guid: b72f8ed09f5342c49a828e501c46de11, type: 3}
       propertyPath: fall
@@ -3495,7 +3495,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1993286282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f75c829b816344b5b7c2421b9f29b689, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e314312729b55845aefe0ebb54768cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1993286284

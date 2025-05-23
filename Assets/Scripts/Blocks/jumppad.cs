@@ -7,16 +7,16 @@ using static Unity.VisualScripting.Member;
 public class JumpPad : MonoBehaviour
 {
     public float jumpForce = 10000f;
-    GameManger gameManager;
+    GameManager gameManager;
     [SerializeField]
-    private AudioSource source;
+    private AudioManager _audioManager;
     [SerializeField] AudioClip clip;
 
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.tag == "Player" && gameManager.PlayerColor == PlayerColor.Yellow)
+        if (collision.gameObject.tag == "Player" && gameManager.PlayerColor == PlayerColor.Yellow)
         {
-            Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D>();
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
 
             if (rb != null)
             {
@@ -25,7 +25,7 @@ public class JumpPad : MonoBehaviour
                 currentVelocity.y = 0;
                 rb.velocity = currentVelocity;
                 rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
-                source.PlayOneShot(clip); //å¯â âπÇçƒê∂
+                _audioManager.PlaySE(clip); //å¯â âπÇçƒê∂
             }
         }
     }
@@ -33,7 +33,7 @@ public class JumpPad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManger>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame

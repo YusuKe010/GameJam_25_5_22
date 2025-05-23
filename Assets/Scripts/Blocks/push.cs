@@ -5,12 +5,12 @@ using UnityEngine;
 public class push : MonoBehaviour
 {
     Rigidbody2D rb;
-    GameManger gameManager;
+    GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        gameManager = FindAnyObjectByType<GameManger>();
+        gameManager = FindAnyObjectByType<GameManager>();
 
     }
 
