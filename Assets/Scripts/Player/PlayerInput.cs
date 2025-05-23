@@ -9,9 +9,17 @@ public class PlayerInput : MonoBehaviour
     public event Action OnInputJump;
     public event Action OnInputRightMouseClick;
     public event Action OnInputS;
+    GameManager _gameManager;
+
+    private void Start()
+    {
+        
+        _gameManager = FindAnyObjectByType<GameManager>();
+    }
 
     private void Update()
     {
+        if (_gameManager.IsGoal) return;
         Vector2 input = new Vector2(UnityEngine.Input.GetAxis("Horizontal"), 0);
         Input?.Invoke(input);
 

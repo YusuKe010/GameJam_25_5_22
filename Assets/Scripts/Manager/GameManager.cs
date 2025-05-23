@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Image _blackfade;
     [SerializeField] AudioClip clearJingle;
     [SerializeField] AudioManager audioManager;
+    public bool IsGoal;
 
     private PlayerColor playerCoplor = PlayerColor.Red;
 
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
         audioManager.StopBGM();
         audioManager.LoopOFF();
         audioManager.PlayBGM(clearJingle);
-
+        IsGoal = true;
         StartCoroutine("FadeOut");
 	}
     IEnumerator FadeIn()
