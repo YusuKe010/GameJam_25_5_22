@@ -18,4 +18,18 @@ public class AudioManager : MonoBehaviour
     {
         _SEsource.PlayOneShot(audio);
     }
+
+    public void StopBGM()
+    {
+        _BGMsource.Stop();
+    }
+
+    public void LoopOFF()
+    {
+        _BGMsource.loop = false;
+    }
+    public void LoopON()
+    {
+        _BGMsource.loop = true;
+    }
 }
