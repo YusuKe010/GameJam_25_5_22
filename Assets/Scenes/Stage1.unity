@@ -2242,7 +2242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f112cc1139b04ad45870f59c927ef14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 229628585}
 --- !u!1001 &1070016033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4024,6 +4023,18 @@ PrefabInstance:
       propertyPath: _blackfade
       value: 
       objectReference: {fileID: 2117622520}
+    - target: {fileID: 7399961395811872064, guid: 8859a5fd96974324ca7ae50d1e929000, type: 3}
+      propertyPath: clearJingle
+      value: 
+      objectReference: {fileID: 8300000, guid: bad04cf30a3403b4d894a10008628a24, type: 3}
+    - target: {fileID: 7399961395811872064, guid: 8859a5fd96974324ca7ae50d1e929000, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1855205303}
+    - target: {fileID: 8152981069159819775, guid: 8859a5fd96974324ca7ae50d1e929000, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fb085aad9a90fc24caec0a26ba48cd9e, type: 3}
     - target: {fileID: 8964110567061655977, guid: 8859a5fd96974324ca7ae50d1e929000, type: 3}
       propertyPath: m_Name
       value: Managers
