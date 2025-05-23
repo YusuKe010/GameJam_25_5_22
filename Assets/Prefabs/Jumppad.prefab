@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 10
-  source: {fileID: 0}
+  _audioManager: {fileID: 0}
   clip: {fileID: 8300000, guid: bf567896d2adce84da618774c43c7ca3, type: 3}
 --- !u!61 &-837695797852308146
 BoxCollider2D:
@@ -137,7 +137,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.2, y: 5.28}
+    oldSize: {x: 0.84, y: 1.056}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -6,7 +6,7 @@ using static Unity.VisualScripting.Member;
 
 public class JumpPad : MonoBehaviour
 {
-    public float jumpForce = 10000f;
+    public float jumpForce = 100000f;
     GameManager gameManager;
     [SerializeField]
     private AudioManager _audioManager;
@@ -22,7 +22,7 @@ public class JumpPad : MonoBehaviour
             {
                 Debug.Log("”½‰‚Í‚µ‚Ä‚é‚¼");
                 Vector3 currentVelocity = rb.velocity;
-                currentVelocity.y = 0;
+                currentVelocity.y = 4;
                 rb.velocity = currentVelocity;
                 rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
                 _audioManager.PlaySE(clip); //Œø‰Ê‰¹‚ğÄ¶
