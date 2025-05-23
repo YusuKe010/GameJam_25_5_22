@@ -52,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
             _currentHP = _maxHP;
             _audioManager.PlaySE(_dethSE);
 
-            OnDeth?.Invoke();
+            OnDeth?.Invoke("");
         }
     }
 }
